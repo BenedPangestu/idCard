@@ -1,0 +1,90 @@
+.background-image {
+    background-image: url('background.jpg');
+    /* Ganti 'background.jpg' dengan nama file background Anda */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    /* Menggunakan min-height untuk memastikan latar belakang mencakup seluruh konten */
+    position: relative;
+    /* Menambahkan posisi relatif untuk konten di dalamnya */
+}
+
+.navbar-brand img,
+.navbar-toggler img {
+    /* max-height: 40px; Menentukan tinggi maksimum untuk gambar di dalam navbar */
+}
+
+#resultContainer {
+    margin-top: 20px;
+    /* Memberikan margin atas pada container hasil untuk memisahkannya dari form */
+}
+
+#idPhoto {
+    max-width: 100%;
+    /* Membuat gambar idPhoto mengisi lebar maksimum dari container */
+    /* height: auto; Menyesuaikan tinggi gambar sesuai dengan lebar yang ditetapkan */
+}
+
+/* .img_stamp.hide_opacity{
+    opacity: 0;
+} */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#searchButton {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#searchResults {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+.img_stamp {
+    position: absolute;
+    right: 400px;
+    top: 700px;
+
+    transition: opacity 3s ease-in-out;
+    opacity: 1;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Adjust the bottom margin as needed */
+    right: 20px; /* Adjust the right margin as needed */
+    width: 80px; /* Increase the button size */
+    height: 80px; /* Increase the button size */
+    border-radius: 50%;
+    background-color: #25D366; /* WhatsApp green color */
+    cursor: pointer;
+    z-index: 9999; /* Ensure it stays on top of other elements */
+  }
+  
+  .whatsapp-button img {
+    width: 100%; /* Ensure the image scales with the button */
+    height: 100%; /* Ensure the image scales with the button */
+    object-fit: cover; /* Cover the entire button area with the image */
+  }
+  
