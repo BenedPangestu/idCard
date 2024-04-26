@@ -38,6 +38,17 @@
     /* Rounded corners */
     padding: 10px;
 }
+.fixed-logo {
+    position: fixed;
+    bottom: 20px; /* Sesuaikan dengan jarak dari bawah */
+    left: 20px; /* Sesuaikan dengan jarak dari kiri */
+    z-index: 9999; /* Pastikan logo tampil di atas konten lainnya */
+}
+
+.logo {
+    width: 100px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto;
+}
 
 #searchInput {
     flex: 1;

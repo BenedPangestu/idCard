@@ -1,23 +1,39 @@
 <?php
 session_start(); // Mulai sesi
-
+require_once('database.php');
 // Proses login
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     // Melakukan verifikasi username dan password (contoh sederhana, Anda harus menggantinya dengan proses autentikasi yang aman)
-    if ($username === 'admin' && $password === 'password') {
-        // Jika login berhasil, set session 'user'
+    // $result = $this->conn->query("SELECT * FROM user where username = '.$username.' AND password = '.$password.'");
+    // return $result;
+    $sql = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+    $result = $db->query($sql);
+    // print_r($result);
+    if ($result->num_rows > 0) {
+        // Login berhasil
         $_SESSION['user'] = $username;
-
+        $_SESSION['password'] = $password;
+        
         // Redirect ke halaman setelah login
         header("location: admin/index.php");
-        exit();
     } else {
-        // Jika login gagal, tampilkan pesan error
-        $error = "Username atau Password salah";
+        // Login gagal
+        echo "Username atau password salah!";
     }
+    // if ($username === 'admin' && $password === 'password') {
+    //     // Jika login berhasil, set session 'user'
+    //     $_SESSION['user'] = $username;
+
+    //     // Redirect ke halaman setelah login
+    //     header("location: admin/index.php");
+    //     exit();
+    // } else {
+    //     // Jika login gagal, tampilkan pesan error
+    //     $error = "Username atau Password salah";
+    // }
 }
 ?>
 <!doctype html>

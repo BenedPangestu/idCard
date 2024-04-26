@@ -59,6 +59,11 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="WhatsApp">
         </a>
     </div>
+    <div class="fixed-logo">
+        <a href="https://maps.google.com" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/google-maps.png" alt="Google Maps" class="logo">
+        </a>
+    </div>    
     <!-- Bootstrap JS (optional) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
